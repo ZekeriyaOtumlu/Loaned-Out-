@@ -3,25 +3,26 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var cat = require("../models/loaned");
+var loan = require("../models/loaned");
 
 router.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/loaned", function(req, res) {
-  cat.all(function(data) {
-    res.json({ cats: data });
+router.get("/People", function(req, res) {
+  loan.all(function(data) {
+    res.json({ People: data });
   });
 });
 
-router.post("/loaned", function(req, res) {
-  cat.create([
-    "name", "sleepy"
-  ], [
-    req.body.name, req.body.sleepy
-  ], function(result) {
+router.post("/Items", function(req, res) {
+  loan.create({
+   ItemName: req.body.item_name,
+   ItemCategory: req.body.Category,
+   ItemImage: req.body.image_url
+  
+  },function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
@@ -32,8 +33,10 @@ router.put("/loaned/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  cat.update({
-    sleepy: req.body.sleepy
+  loan.update({
+    PersonPhoneNumber: req.body.Phone_Number,
+    PersonEmail: req.body.Email,
+    PersonPhoto: req.body.Photo_url
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
@@ -47,7 +50,7 @@ router.put("/loaned/:id", function(req, res) {
 router.delete("/loaned/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  cat.delete(condition, function(result) {
+  loan.delete(condition, function(result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
