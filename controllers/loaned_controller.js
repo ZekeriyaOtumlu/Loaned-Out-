@@ -2,6 +2,13 @@ var express = require("express");
 
 var router = express.Router();
 
+
+var path = require("path")
+
+// Import the model (cat.js) to use its database functions.
+var loan = require("../models/loaned");
+
+
 router.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
@@ -13,6 +20,7 @@ router.get("/addUser", function(req, res) {
 router.get("/admin", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/admin.html"));
 });
+
 
 
 
