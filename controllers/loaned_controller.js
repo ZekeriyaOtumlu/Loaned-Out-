@@ -1,5 +1,5 @@
 var express = require("express");
-
+var path = require("path");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
@@ -17,6 +17,10 @@ router.get("/addUser", function(req, res) {
 
 router.get("/admin", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/admin.html"));
+});
+
+router.get("/customerInfo", function(req, res) {
+  res.sendFile(path.join(__dirname, "..public/customerinfo.html"));
 });
 
 
