@@ -10,32 +10,59 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
+    <script src="./assests/js/admin.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid">
-  
+  <div class="container-fluid">
     <header>
+     
+   
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Loaned Items</h1>
-          <p class="lead">If you want to borrow something from me you are going to have to fill this out.  Sorry... suck it up.</p>
+          <h1 class="display-4">Loaned Items - Admin page</h1>
+          <p class="lead">Add yourself to the database if you want to borrow an item</p>
         </div>
       </div>
     </header>
-    <div class="card" style="width: 10rem;">
-        <img src="./assests/img/Null_profilepic.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Never used this site before?  Click below to get set up.</p>
-          <a href="#" class="btn btn-primary">New User</a>
-        </div>
+
+    <button type="button" class="btn btn-primary btn-sm" id="showAddItem" onclick="addItemshow()">Add Item</button>
+<br><br>
+    <form id="add_item"  style= "display: none">
+      <div class="form-group">
+             <label for="item_name">Name</label>
+        <input type="itemName" class="form-control" id="itemname1" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Category</label>
+<!-- It would be cool to fill the categories below with the category fields from the database. Not required but if we have time -->
+        <select class="form-control" id="itemcategoy1">
+          <option>Tools</option>
+          <option>Movies</option>
+          <option>Games</option>
+          <option>Money</option>
+         </select>
+      </div>
+  <div class="form-group">
+             <label for="value">Value</label>
+        <input type="value" class="form-control" id=""value1" placeholder="Item Value">
       </div>
 
+      
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Upload Item Photo</label>
+        <input type="file" class="form-control-file" id="itemPhoto">
+      </div>
+
+      
+
+    </form>
 
 
-    </div>
 
+
+
+  </div>
 
 
 
