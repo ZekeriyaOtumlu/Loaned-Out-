@@ -15,7 +15,6 @@ insert into Items (item_name, Category, Value, image_url) values
 ("Money", "Money", 20.00, "#")
 ;
 
-
-insert into Transaction (Borrower_id, BorrowedItem_id) values
+insert into Transaction (Borrower_id, LoanedItem_id) values
 (1, 1)
 ;

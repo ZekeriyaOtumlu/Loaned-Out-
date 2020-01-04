@@ -24,11 +24,11 @@ CREATE TABLE Items
 CREATE TABLE Transaction
 (
 	transaction_id int NOT NULL AUTO_INCREMENT,
-	PRIMARYowedIte KEY (transaction_id),
+	PRIMARY KEY (transaction_id),
 	Borrower_id INT NOT NULL,
-	Borrower_Name INT NOT NULL,
+	Borrower_Name VARCHAR(255),
 	LoanedItem_id INT NOT NULL,
-	LoadedItem_Name VARCHAR(255) NOT NULL,
+	LoadedItem_Name VARCHAR(255),
 	time_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
