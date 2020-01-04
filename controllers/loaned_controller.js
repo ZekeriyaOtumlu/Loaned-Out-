@@ -2,12 +2,25 @@ var express = require("express");
 
 var router = express.Router();
 
+var path = require("path")
+
 // Import the model (cat.js) to use its database functions.
 var loan = require("../models/loaned");
 
 router.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "public/index.html"));
+  res.sendFile(path.join(__dirname, "../public/index.html"));
 });
+
+router.get("/addUser", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/add.html"));
+});
+
+router.get("/admin", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/admin.html"));
+});
+
+
+
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/People", function(req, res) {
