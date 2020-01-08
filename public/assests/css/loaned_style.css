@@ -8,3 +8,27 @@ position: sticky;
 text-decoration: underline;
 color: blue;
 }
+
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .update-form {
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+  
+  .delItem {
+      float: right;
+  }
