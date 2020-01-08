@@ -56,7 +56,7 @@ router.post("/People", function(req, res) {
 
   },function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json({ people_id: result.insertId });
   });
 });
 
@@ -70,7 +70,7 @@ router.post("/Items", function(req, res) {
   
   },function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json({ item_id: result.insertId });
   });
 });
 
@@ -85,14 +85,14 @@ router.post("/Transaction", function(req, res) {
   
   },function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json({ transaction_id: result.insertId });
   });
 });
 
 
 // People Table
 router.put("/People/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.people_id;
 
   console.log("condition", condition);
 
@@ -106,14 +106,14 @@ router.put("/People/:id", function(req, res) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
-      res.json({ id: req.params.id});
+      res.json({people_id: req.params.people_id});
     }
   });
 });
 
 // Items Table
 router.put("/Items/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.item_id;
 
   console.log("condition", condition);
 
@@ -127,14 +127,14 @@ router.put("/Items/:id", function(req, res) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
-      res.json({ id: req.params.id});
+      res.json({item_id: req.params.item_id});
     }
   });
 });
 
 // Transaction Table
 router.put("/Transaction/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.transaction_id;
 
   console.log("condition", condition);
 
@@ -149,14 +149,14 @@ router.put("/Transaction/:id", function(req, res) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
-      res.json({ id: req.params.id});
+      res.json({ transaction_id: req.params.transaction_id});
     }
   });
 });
 
 // People Table
 router.delete("/People/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.people_id;
 
   loan.delete(condition, function(result) {
     if (result.affectedRows == 0) {
@@ -170,7 +170,7 @@ router.delete("/People/:id", function(req, res) {
 
 // Item Table
 router.delete("/Items/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.item_id;
 
   item.delete(condition, function(result) {
     if (result.affectedRows == 0) {
@@ -184,7 +184,7 @@ router.delete("/Items/:id", function(req, res) {
 
 // Transaction Table
 router.delete("/Transaction/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.transaction_id;
 
   transactions.delete(condition, function(result) {
     if (result.affectedRows == 0) {
