@@ -49,13 +49,14 @@ router.get("/Transaction", function(req, res) {
 // People Table
 router.post("/People", function(req, res) {
   loan.create({
+    PersonName: req.body.name,
     PersonPhoneNumber: req.body.Phone_Number,
     PersonEmail: req.body.Email,
     PersonPhoto: req.body.Photo_url
 
   },function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json({ people_id: result.insertId });
   });
 });
 
@@ -64,11 +65,12 @@ router.post("/Items", function(req, res) {
   item.create({
    ItemName: req.body.item_name,
    ItemCategory: req.body.Category,
+   ItemValue: req.body.Value,
    ItemImage: req.body.image_url
   
   },function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json({ item_id: result.insertId });
   });
 });
 
@@ -78,23 +80,24 @@ router.post("/Transaction", function(req, res) {
    TrBorrower_Name: req.body.Borrower_Name,
    TrBorrowerId: req.body.Borrower_id,
    TrLoanedItemId: req.body.LoanedItem_id,
-   TrLoadedItemName: req.body.LoadedItem_Name
-   
+   TrLoadedItemName: req.body.LoadedItem_Name,
+   TrTimeCreated: req.body.time_created
   
   },function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json({ transaction_id: result.insertId });
   });
 });
 
 
 // People Table
 router.put("/People/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.people_id;
 
   console.log("condition", condition);
 
   loan.update({
+    PersonName: req.body.name,
     PersonPhoneNumber: req.body.Phone_Number,
     PersonEmail: req.body.Email,
     PersonPhoto: req.body.Photo_url
@@ -103,34 +106,35 @@ router.put("/People/:id", function(req, res) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
-      res.json({ id: req.params.id});
+      res.json({people_id: req.params.people_id});
     }
   });
 });
 
 // Items Table
 router.put("/Items/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.item_id;
 
   console.log("condition", condition);
 
   item.update({
    ItemName: req.body.item_name,
    ItemCategory: req.body.Category,
+   ItemValue: req.body.Value,
    ItemImage: req.body.image_url
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
-      res.json({ id: req.params.id});
+      res.json({item_id: req.params.item_id});
     }
   });
 });
 
 // Transaction Table
 router.put("/Transaction/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.transaction_id;
 
   console.log("condition", condition);
 
@@ -138,20 +142,21 @@ router.put("/Transaction/:id", function(req, res) {
     TrBorrower_Name: req.body.Borrower_Name,
     TrBorrowerId: req.body.Borrower_id,
     TrLoanedItemId: req.body.LoanedItem_id,
-    TrLoadedItemName: req.body.LoadedItem_Name
+    TrLoadedItemName: req.body.LoadedItem_Name,
+    TrTimeCreated: req.body.time_created
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
-      res.json({ id: req.params.id});
+      res.json({ transaction_id: req.params.transaction_id});
     }
   });
 });
 
 // People Table
 router.delete("/People/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.people_id;
 
   loan.delete(condition, function(result) {
     if (result.affectedRows == 0) {
@@ -165,7 +170,7 @@ router.delete("/People/:id", function(req, res) {
 
 // Item Table
 router.delete("/Items/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.item_id;
 
   item.delete(condition, function(result) {
     if (result.affectedRows == 0) {
@@ -179,7 +184,7 @@ router.delete("/Items/:id", function(req, res) {
 
 // Transaction Table
 router.delete("/Transaction/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.transaction_id;
 
   transactions.delete(condition, function(result) {
     if (result.affectedRows == 0) {
