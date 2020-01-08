@@ -49,6 +49,7 @@ router.get("/Transaction", function(req, res) {
 // People Table
 router.post("/People", function(req, res) {
   loan.create({
+    PersonName: req.body.name,
     PersonPhoneNumber: req.body.Phone_Number,
     PersonEmail: req.body.Email,
     PersonPhoto: req.body.Photo_url
@@ -64,6 +65,7 @@ router.post("/Items", function(req, res) {
   item.create({
    ItemName: req.body.item_name,
    ItemCategory: req.body.Category,
+   ItemValue: req.body.Value,
    ItemImage: req.body.image_url
   
   },function(result) {
@@ -78,8 +80,8 @@ router.post("/Transaction", function(req, res) {
    TrBorrower_Name: req.body.Borrower_Name,
    TrBorrowerId: req.body.Borrower_id,
    TrLoanedItemId: req.body.LoanedItem_id,
-   TrLoadedItemName: req.body.LoadedItem_Name
-   
+   TrLoadedItemName: req.body.LoadedItem_Name,
+   TrTimeCreated: req.body.time_created
   
   },function(result) {
     // Send back the ID of the new quote
@@ -95,6 +97,7 @@ router.put("/People/:id", function(req, res) {
   console.log("condition", condition);
 
   loan.update({
+    PersonName: req.body.name,
     PersonPhoneNumber: req.body.Phone_Number,
     PersonEmail: req.body.Email,
     PersonPhoto: req.body.Photo_url
@@ -117,6 +120,7 @@ router.put("/Items/:id", function(req, res) {
   item.update({
    ItemName: req.body.item_name,
    ItemCategory: req.body.Category,
+   ItemValue: req.body.Value,
    ItemImage: req.body.image_url
   }, condition, function(result) {
     if (result.changedRows == 0) {
@@ -138,7 +142,8 @@ router.put("/Transaction/:id", function(req, res) {
     TrBorrower_Name: req.body.Borrower_Name,
     TrBorrowerId: req.body.Borrower_id,
     TrLoanedItemId: req.body.LoanedItem_id,
-    TrLoadedItemName: req.body.LoadedItem_Name
+    TrLoadedItemName: req.body.LoadedItem_Name,
+    TrTimeCreated: req.body.time_created
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
