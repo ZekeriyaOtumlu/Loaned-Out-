@@ -92,7 +92,7 @@ router.post("/Transaction", function(req, res) {
 
 // People Table
 router.put("/People/:id", function(req, res) {
-  var condition = "id = " + req.params.people_id;
+  var condition = "people_id = " + req.params.id;
 
   console.log("condition", condition);
 
@@ -113,7 +113,7 @@ router.put("/People/:id", function(req, res) {
 
 // Items Table
 router.put("/Items/:id", function(req, res) {
-  var condition = "id = " + req.params.item_id;
+  var condition = "item_id = " + req.params.id;
 
   console.log("condition", condition);
 
@@ -134,7 +134,7 @@ router.put("/Items/:id", function(req, res) {
 
 // Transaction Table
 router.put("/Transaction/:id", function(req, res) {
-  var condition = "id = " + req.params.transaction_id;
+  var condition = "transaction_id = " + req.params.id;
 
   console.log("condition", condition);
 
@@ -156,7 +156,7 @@ router.put("/Transaction/:id", function(req, res) {
 
 // People Table
 router.delete("/People/:id", function(req, res) {
-  var condition = "id = " + req.params.people_id;
+  var condition = "people_id = " + req.params.id;
 
   loan.delete(condition, function(result) {
     if (result.affectedRows == 0) {
@@ -170,7 +170,7 @@ router.delete("/People/:id", function(req, res) {
 
 // Item Table
 router.delete("/Items/:id", function(req, res) {
-  var condition = "id = " + req.params.item_id;
+  var condition = "item_id = " + req.params.id;
 
   item.delete(condition, function(result) {
     if (result.affectedRows == 0) {
@@ -184,7 +184,7 @@ router.delete("/Items/:id", function(req, res) {
 
 // Transaction Table
 router.delete("/Transaction/:id", function(req, res) {
-  var condition = "id = " + req.params.transaction_id;
+  var condition = "transaction_id = " + req.params.id;
 
   transactions.delete(condition, function(result) {
     if (result.affectedRows == 0) {
