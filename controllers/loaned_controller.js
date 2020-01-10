@@ -86,10 +86,10 @@ router.put("/People/:id", function(req, res) {
   console.log("condition", condition);
 
   loan.update({
-    PersonName: req.body.name,
-    PersonPhoneNumber: req.body.Phone_Number,
-    PersonEmail: req.body.Email,
-    PersonPhoto: req.body.Photo_url
+    Name: req.body.name,
+    Phone_Number: req.body.Phone_Number,
+    Email: req.body.Email,
+    Photo_url: req.body.Photo_url
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
@@ -107,16 +107,16 @@ router.put("/Items/:id", function(req, res) {
   console.log("condition", condition);
 
   item.update({
-   ItemName: req.body.item_name,
-   ItemCategory: req.body.Category,
-   ItemValue: req.body.Value,
-   ItemImage: req.body.image_url
+   Item_Name: req.body.item_name,
+   Category: req.body.Category,
+   Value: req.body.Value,
+   Image_url: req.body.image_url
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
-      res.json({item_id: req.params.id});
+      res.json({id: req.params.id});
     }
   });
 });
@@ -128,17 +128,17 @@ router.put("/Transaction/:id", function(req, res) {
   console.log("condition", condition);
 
   transactions.update({
-    TrBorrower_Name: req.body.Borrower_Name,
-    TrBorrowerId: req.body.Borrower_id,
-    TrLoanedItemId: req.body.LoanedItem_id,
-    TrLoadedItemName: req.body.LoadedItem_Name,
-    TrTimeCreated: req.body.time_created
+    Borrower_Name: req.body.Borrower_Name,
+    Borrower_id: req.body.Borrower_id,
+    LoanedItem_id: req.body.LoanedItem_id,
+    LoadedItem_Name: req.body.LoadedItem_Name,
+    Time_Created: req.body.time_created
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
-      res.json({ transaction_id: req.params.transaction_id});
+      res.json({ id: req.params.id});
     }
   });
 });
