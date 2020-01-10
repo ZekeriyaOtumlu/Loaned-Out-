@@ -32,7 +32,7 @@ $(document).ready(function() {
       var id = $(this).data("itemid");
       console.log("delete this is " + this);
       console.log("delete id is " + id);
-    
+
     
   
       // Send the DELETE request.
@@ -45,7 +45,7 @@ $(document).ready(function() {
       });
     });
   
-    $("#postNewItem").on("submit", function(event) {
+    $("#add_item").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
@@ -64,7 +64,7 @@ $(document).ready(function() {
           .val()
           .trim()
       };
-      console.log(newItem);
+      
 //       // Send the POST request.
       $.ajax("/items", {
         type: "POST",
@@ -78,19 +78,19 @@ $(document).ready(function() {
       });
     });
   
-    $("#updateItem").on("submit", function(event) {
+    $("#update_item").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
-      var id = $("#itemid2")
+      var id = $("#itemID2")
         .val()
         .trim();
   
-      var updateItem = {
+      var updatedItem = {
         item_name: $("#update_item [id=itemname2]")
         .val()
         .trim(),
-      Category: $("#update_item [id=itemcategoy2]")
+      Category: $("#update_item [id=itemcategory2]")
         .val()
         .trim(),
         Value: $("#update_item [id=value2]")
@@ -100,26 +100,20 @@ $(document).ready(function() {
         .val()
         .trim()
     };
-      
-  
+
 //       // Send the PUT request.
       $.ajax("/items/" + id, {
         type: "PUT",
-        data: JSON.stringify(updateItem),
+        data: JSON.stringify(updatedItem),
         dataType: "json",
         contentType: "application/json"
       }).then(function() {
-        console.log("updated id ", id);
+        console.log("updated id " + id);
         // Reload the page to get the updated list
         location.reload();
       });
     });
   });
-  
-
-
-
-
 
 
 function addItemshow() {

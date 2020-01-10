@@ -58,8 +58,10 @@ router.post("/People", function(req, res) {
 
 // Items Table
 router.post("/Items", function(req, res) {
-  item.create([ "item_name", "Category", "Value", "image_url" ], 
-  [req.body.item_name, req.body.Category, req.body.Value, req.body.image_url],
+
+  item.create([ "item_name", "Category", "Value", "image_url" ], [
+  req.body.item_name, req.body.Category, req.body.Value, req.body.image_url],
+
   
    function(result) {
     // Send back the ID of the new quote
@@ -110,13 +112,18 @@ router.put("/Items/:id", function(req, res) {
    Item_Name: req.body.item_name,
    Category: req.body.Category,
    Value: req.body.Value,
-   Image_url: req.body.image_url
+
+   Image_URL: req.body.image_url
+
   }, condition, function(result) {
     if (result.changedRows == 0) {
+      console.log("update " + "if")
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
+
       res.json({id: req.params.id});
+
     }
   });
 });
