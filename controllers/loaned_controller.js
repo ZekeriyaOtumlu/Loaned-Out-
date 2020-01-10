@@ -48,13 +48,9 @@ router.get("/Transaction", function(req, res) {
 
 // People Table
 router.post("/People", function(req, res) {
-  loan.create({
-    PersonName: req.body.name,
-    PersonPhoneNumber: req.body.Phone_Number,
-    PersonEmail: req.body.Email,
-    PersonPhoto: req.body.Photo_url
-
-  },function(result) {
+  loan.create([ "name", "Phone_Number", "Email", "Photo_url" ],
+  [req.body.name, req.body.Phone_Number, req.body.Email, req.body.Photo_url],
+    function(result) {
     // Send back the ID of the new quote
     res.json({ people_id: result.insertId });
   });
@@ -62,13 +58,10 @@ router.post("/People", function(req, res) {
 
 // Items Table
 router.post("/Items", function(req, res) {
-  item.create({
-   ItemName: req.body.item_name,
-   ItemCategory: req.body.Category,
-   ItemValue: req.body.Value,
-   ItemImage: req.body.image_url
+  item.create([ "item_name", "Category", "Value", "image_url" ], 
+  [req.body.item_name, req.body.Category, req.body.Value, req.body.image_url],
   
-  },function(result) {
+   function(result) {
     // Send back the ID of the new quote
     res.json({ item_id: result.insertId });
   });
@@ -76,14 +69,10 @@ router.post("/Items", function(req, res) {
 
 // Transaction Table
 router.post("/Transaction", function(req, res) {
-  transactions.create({
-   TrBorrower_Name: req.body.Borrower_Name,
-   TrBorrowerId: req.body.Borrower_id,
-   TrLoanedItemId: req.body.LoanedItem_id,
-   TrLoadedItemName: req.body.LoadedItem_Name,
-   TrTimeCreated: req.body.time_created
+  transactions.create([ "Borrower_id", "Borrower_Name", "LoanedItem_id", "LoadedItem_Name", "time_created"],
+   [req.body.Borrower_id, req.body.Borrower_Name, req.body.LoanedItem_id,req.body.LoadedItem_Name, req.body.time_created  ],
   
-  },function(result) {
+  function(result) {
     // Send back the ID of the new quote
     res.json({ transaction_id: result.insertId });
   });
@@ -127,7 +116,7 @@ router.put("/Items/:id", function(req, res) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
-      res.json({item_id: req.params.item_id});
+      res.json({item_id: req.params.id});
     }
   });
 });
