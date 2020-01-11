@@ -1,5 +1,43 @@
 $(document).ready(function() {
     console.log("hello")
+      $.ajax("/People", {
+        type: "GET"
+      }).then(function(data) {
+        var borrower = data.People;
+      var len = borrower.length;
+      console.log(len);
+    
+        var User_elem = $("#choosePerson");
+        for (var i = 0; i < len; i++) {
+           
+          User_elem.append(
+            '<option value="' +
+              borrower[i].people_id +
+              '">' +
+              borrower[i].name +
+              "</option>"
+           )}
+             });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // $.ajax("/items", {
     //   type: "GET"
     // }).then(function(data) {
@@ -77,7 +115,7 @@ $(document).ready(function() {
       }).then(function() {
         console.log("created new plan");
         // Reload the page to get the updated list
-        // location.reload();
+        location.reload();
       });
     });
   

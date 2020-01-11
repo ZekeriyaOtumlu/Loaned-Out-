@@ -38,16 +38,19 @@
 
     }
 
-    #btn1 {
+    .selections {
         margin-left: 20%;
-        margin-top: -55%;
+        margin-top: -25%;
         font-weight: bolder;
-        width: 8%;
+        color: white;
+        font-size: 2.0em;
+  
     }
 
     .navbar {
         background-color: rgb(247, 250, 253);
     }
+
 
     .row p {
         font-weight: bold;
@@ -64,3 +67,9 @@ background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, F
 
     }
    
+
+    #choosePerson {
+        /* height: 2.4em; */
+        width: 20%;
+    }
+
