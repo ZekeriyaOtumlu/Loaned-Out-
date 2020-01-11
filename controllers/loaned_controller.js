@@ -1,6 +1,17 @@
 var express = require("express");
 var path = require("path");
 var router = express.Router();
+// var cloudinary = require('cloudinary');
+
+// cloudinary.config({
+//   cloud_name: 'lazaroperez0823',
+//   api_key: '339542316968685',
+//   api_secret: 'rQrCNn3dfooBWAmgdJ9MKar_vLo'
+// });
+
+// // cloudinary://339542316968685:rQrCNn3dfooBWAmgdJ9MKar_vLo@lazaroperez0823/
+
+
 
 // Import the model (cat.js) to use its database functions.
 var loan = require("../models/loaned");

@@ -1,22 +1,19 @@
 .container-fluid {
     background-color: black;
     }
-    
+
     .header {
         background-color: blue;
     }
-    
+
     .imgContainer {
         background-color: white;
         height: 400px;
     }
-    
+
     .card {
         /* z-index: 0; */
         position: absolute;
-        bottom: 384px;
-        margin-left: 200px;
-        
+        top: 7%;
+        margin-left: 5%;
     }
-    
-    
