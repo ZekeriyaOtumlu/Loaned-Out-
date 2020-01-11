@@ -2,22 +2,12 @@
     background-color: black;
     }
 
-    .header {
-        background-color: blue;
-    }
 
-    .row {
+    /* .row {
         background-color: white;
         height: 400px;
-    }
+    } */
 
-    .card {
-        /* z-index: 0; */
-        position: absolute;
-        top: 7%;
-        margin-left: 200px;
-        margin-top: 5%;
-    }
     
     
 
@@ -43,7 +33,7 @@
         margin-top: -25%;
         font-weight: bolder;
         color: white;
-        font-size: 2.0em;
+        font-size: 1.5em;
   
     }
 
@@ -68,8 +58,9 @@ background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, F
     }
    
 
-    #choosePerson {
-        /* height: 2.4em; */
-        width: 20%;
+     #choosePerson {
+        height: 2em;
+        width: 20%; 
+        top: 20%;
     }
 
