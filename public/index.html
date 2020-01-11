@@ -14,12 +14,14 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a5a0fef831.js" crossorigin="anonymous"></script>
   <script src="./assests/js/index.js"></script>
 
   <title>Document</title>
@@ -27,13 +29,14 @@
 
 <body>
   <header>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="#">Loaned Out</a>
-      
+
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
@@ -54,19 +57,19 @@
         </form>
       </div>
     </nav>
-    
-  </div>
-</div>
-</nav>
-</header>
 
-<div class="container-fluid">
+    </div>
+    </div>
+    </nav>
+  </header>
 
-<section class="bodyColor">
-  <style>
-    .parallax {
-      /* The image used */
-      background-image: url("./assests/img/final pic.jpg");
+  <div class="container-fluid">
+
+    <section class="bodyColor">
+      <style>
+        .parallax {
+          /* The image used */
+          background-image: url("./assests/img/final pic.jpg");
 
           /* Set a specific height */
           height: 900px;
@@ -85,69 +88,87 @@
         <button type="button" class="btn btn-primary" id="btn1" data-toggle="modal" data-target="#exampleModal">
           Add User
         </button>
+      </div>
+      <div class="row">
+        <div class="col-lg-5">
+         <i class="fas fa-warehouse fa-7x"></i>
+         <p>Pick an item <br> from our special<br> selection of inventory</p>
         </div>
-        <div class="choose-item">
-          <!-- <img src="./assests/img/final pic.jpg">
-          <img src="./assests/img/tools steel.png">
-          <img src="./assests/img/furniture-steel.png"> -->
-        </div>
+
+        <div class="col-lg-5">
+          <i class="fab fa-amazon-pay fa-7x"></i>
+          <p>Pay for the<br> items that you<br> want to rent</p>
+
+         </div>
+
+         <div class="col-lg-2">
+          <i class="fas fa-shipping-fast fa-7x"></i>
+          <p>Get your item delivered to your from door</p>
+
+         </div>
+
+
+         
+          </div>
+      </div>
     </section>
 
 
 
 
-    <p id="adminLink"><a href="#">Admin Page</a></p>
+    <p id="adminLink"><a href="/admin">Admin Page</a></p>
 
   </div>
 
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add New User</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add New User</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
 
 
 
 
           <!-- FORM SECTION -->
 
-        <form id="add_user">
-          <div class="form-group">
-                 <label for="username">Name</label>
-            <input type="UserName" class="form-control" id="username1" placeholder="">
-          </div>
-          <div class="form-group">
-            <label for="phoneNum">Phone Number</label>
-       <input type="phonenum" class="form-control" id="phonenum1" placeholder="(###) ###-#####">
-     </div>
-      <div class="form-group">
-                 <label for="email">E-mail</label>
-            <input type="UserName" class="form-control" id="email" placeholder="YourEmail@domain.com">
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlFile1">Upload your photo</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" id="add_user_btn" class="btn btn-primary">Save changes</button>
+          <form id="add_user">
+            <div class="form-group">
+              <label for="username">Name</label>
+              <input type="UserName" class="form-control" id="username1" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="phoneNum">Phone Number</label>
+              <input type="phonenum" class="form-control" id="phonenum1" placeholder="(###) ###-#####">
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="UserName" class="form-control" id="email" placeholder="YourEmail@domain.com">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Upload your photo</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" id="add_user_btn" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-  
+
 
 
 
