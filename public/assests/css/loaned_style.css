@@ -15,5 +15,24 @@
         /* z-index: 0; */
         position: absolute;
         top: 7%;
-        margin-left: 5%;
+        margin-left: 200px;
+        margin-top: 5%;
+    }
+    
+    
+
+    .description {
+        color: white;
+        font-weight: bolder;
+    margin-left: 20%;
+    padding-top: 14%;
+    font-size: 5em;
+    }
+
+    .small-description {
+        color: white;
+        font-weight: bolder;
+        margin-left: 20%;
+        margin-bottom: 30%;
+
     }
