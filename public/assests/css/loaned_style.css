@@ -6,7 +6,7 @@
         background-color: blue;
     }
 
-    .imgContainer {
+    .choose-item {
         background-color: white;
         height: 400px;
     }
@@ -26,13 +26,24 @@
         font-weight: bolder;
     margin-left: 20%;
     padding-top: 14%;
-    font-size: 5em;
+    font-size: 4em;
     }
 
     .small-description {
         color: white;
-        font-weight: bolder;
+        font-weight: lighter;
         margin-left: 20%;
         margin-bottom: 30%;
 
+    }
+
+    #btn1 {
+        margin-left: 20%;
+        margin-top: -55%;
+        font-weight: bolder;
+        width: 8%;
+    }
+
+    .navbar {
+        background-color: rgb(247, 250, 253);
     }
