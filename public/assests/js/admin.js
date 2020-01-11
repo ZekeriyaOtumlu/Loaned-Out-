@@ -54,7 +54,7 @@ $(document).ready(function() {
         item_name: $("#add_item [id=itemname1]")
           .val()
           .trim(),
-        Category: $("#add_item [id=itemcategoy1]")
+        Category: $("#add_item [id=itemcategory1]")
           .val()
           .trim(),
           Value: $("#add_item [id=value1]")
@@ -128,3 +128,9 @@ function updateItemshow() {
     $("#update_item").toggle();
     console.log("show");
 };
+
+
+
+cloudinary.uploader.upload("sample.jpg", {"crop":"limit","tags":"samples","width":3000,"height":2000}, function(result) { console.log(result) });
+
+
