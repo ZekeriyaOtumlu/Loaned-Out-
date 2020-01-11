@@ -14,31 +14,48 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <header>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Loaned Out</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/addUser">Add Items</a>
+  <header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Loaned Out</a>
+      
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <a href="/addUser" class="btn btn-primary">New User</a>
+        </form>
+      </div>
+    </nav>
+    
+  </div>
+</div>
+</nav>
+</header>
 
-          </div>
-        </div>
-      </nav>
-    </header>
-    <section class="bodyColor">
-      <style>
-        .parallax {
-          /* The image used */
-          background-image: url("./assests/img/set-of-tool-wrench-162553.jpg");
+<div class="container-fluid">
+
+<section class="bodyColor">
+  <style>
+    .parallax {
+      /* The image used */
+      background-image: url("./assests/img/final pic.jpg");
 
           /* Set a specific height */
-          height: 1300px;
+          height: 900px;
 
           /* Create the parallax scrolling effect */
           background-attachment: fixed;
@@ -49,22 +66,23 @@
       </style>
 
       <div class="parallax">
-        <!-- <img src="./assests/img/set-of-tool-wrench-162553.jpg"> -->
+        <h1 class="description">Loaned Out</h1>
+        <h2 class="small-description">Renting everyday stuff made simple</h2>
         </div>
         <div class="imgContainer">
-          <img src="./assests/img/money-steel.png">
+          <!-- <img src="./assests/img/final pic.jpg">
           <img src="./assests/img/tools steel.png">
-          <img src="./assests/img/furniture-steel.png">
+          <img src="./assests/img/furniture-steel.png"> -->
         </div>
     </section>
-    <div class="card" style="width: 20rem;">
+    <!-- <div class="card" style="width: 20rem;">
       <img src="./assests/img/Null_profilepic.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Sign Up</h5>
         <p class="card-text">Never used this site before? Click below to get set up.</p>
         <a href="/addUser" class="btn btn-primary">New User</a>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
     <p id="adminLink"><a href="#">Admin Page</a></p>
 
   </div>
