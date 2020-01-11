@@ -6,7 +6,7 @@
         background-color: blue;
     }
 
-    .choose-item {
+    .row {
         background-color: white;
         height: 400px;
     }
@@ -27,6 +27,7 @@
     margin-left: 20%;
     padding-top: 14%;
     font-size: 4em;
+    text-shadow: 2em;
     }
 
     .small-description {
@@ -50,7 +51,25 @@
         background-color: rgb(247, 250, 253);
     }
 
+
+    .row p {
+        font-weight: bold;
+        font-size: 1.8em;
+       
+    }
+
+    .row {
+        background: #005AA7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+    }
+   
+
     #choosePerson {
         /* height: 2.4em; */
         width: 20%;
     }
+
