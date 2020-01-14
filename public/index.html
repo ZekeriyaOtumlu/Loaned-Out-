@@ -16,7 +16,7 @@
 <body>
   <header>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-danger">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -74,15 +74,24 @@
 
           </select>
 
-
+          
           OR
-
+          
           <button type="button" class="btn btn-primary" id="btn1" data-toggle="modal" data-target="#exampleModal">
             Add User
           </button>
         </div>
-
         
+        
+        <div class="itemSelection">
+          <select id="chooseItem" name="currentItem">
+            <!-- <option value="volvo">Volvo</option> -->
+      
+          </select>
+          
+          <div class="choose-item">
+            <button type="submit" class="btn btn-primary btn-sm" id="submitTransaction">RENT ITEM</button>
+            </div>
       </div>
     </section>
 
@@ -92,27 +101,6 @@
  
   </section>
 
-  <div class="row">
-    <div class="col-lg-5 warehouse">
-      <i class="fas fa-warehouse fa-7x"></i>
-      <p>Add an item <br> to the loaned  <br> out list</p>
-    </div>
-
-    <div class="col-lg-5">
-      <i class="fas fa-pen fa-7x"></i>
-      <p>Update any other<br> items that you<br> have loaned out</p>
-
-    </div>
-
-    <div class="col-lg-2">
-      <i class="fas fa-trash fa-7x"></i>
-      <p>Delete items when they are returned</p>
-
-    </div>
-
-
-
-  </div>
 
 
 
@@ -135,13 +123,23 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-
-
-
+        
+        
+        <footer class="center-footer">
+          <div class="footer-container">
+              <p> copyright © Loaned Out App January 2020</p>
+          </div>
+      </footer>
+        
+          
+        
+        
+      
+      
+      
+      <div class="modal-body">
 
           <!-- FORM SECTION -->
-
           <form id="add_user">
             <div class="form-group">
               <label for="username">Name</label>
@@ -160,26 +158,10 @@
               <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div> -->
           </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" id="add_user_btn" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
+        </
+        div>
  
 
-  <div class="itemSelection">
-    <select id="chooseItem" name="currentItem">
-      <!-- <option value="volvo">Volvo</option> -->
-
-    </select>
-    
-    <div class="choose-item">
-      <button type="submit" class="btn btn-primary btn-sm" id="submitTransaction">RENT ITEM</button>
-      </div>
 
 
 
