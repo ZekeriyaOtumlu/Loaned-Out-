@@ -232,7 +232,7 @@ table {
     color: white;
     z-index: 30;
     text-align: center;
-       background-color: lightgray;
+       background-color: red;
    }
     .footer-container {
         height: 15px;
