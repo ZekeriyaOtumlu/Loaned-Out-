@@ -14,7 +14,3 @@ insert into Items (item_name, Category, Value, image_url) values
 ("Call of Duty - X-box", "Video Game", 60.00, "#"),
 ("Money", "Money", 20.00, "#")
 ;
-
-insert into Transaction (Borrower_id, LoanedItem_id) values
-(1, 1)
-;
