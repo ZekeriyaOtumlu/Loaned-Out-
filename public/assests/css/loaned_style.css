@@ -83,7 +83,7 @@ margin-left: 0;
 
 #displayItems {
     background-color: white;
-    width: 45%;
+    width: auto;
     margin-left: 5%;
     margin-right: 5%;
     border: 1px solid;
@@ -96,7 +96,7 @@ margin-left: 0;
 
 #displayTransaction {
     background-color: white;
-    width: 45%;
+    width: auto;
     margin-left: 5%;
     margin-right: 5%;
     border: 1px solid;
@@ -108,7 +108,7 @@ margin-left: 0;
 
 #displayPeople {
     background-color: white;
-    width: 50%;
+    width: auto;
     margin-left: 5%;
     margin-right: 5%;
     border: 1px solid;
