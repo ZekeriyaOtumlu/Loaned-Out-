@@ -81,6 +81,11 @@ margin-left: 0;
     color: black;
 }
 
+#adminLink {
+    float: right;
+    padding-top: 3%;
+}
+
 #displayItems {
     background-color: white;
     width: auto;
@@ -143,7 +148,7 @@ margin-left: 0;
 }
 
 html {
-    background-color:skyblue;
+    /* background-color:skyblue; */
 }
 
 .quote {
@@ -217,6 +222,23 @@ table {
    }
 
 
+   footer {
+       background-color: lightgray;
+   }
+    .footer-container {
+        height: 40px;
+    }
+   .center-footer {
+       background-color: lightgrey;
+       height: 10%;
+   }
+
+   .footer-mark {
+      margin-left: 35%;
+      padding-top: 3%;
+   }
+
+
    .itemTableMain {
         margin-left:auto;
         margin-right:auto; 
@@ -233,6 +255,7 @@ table {
    /* z-index: 20; */
 }
 
+
 .center-footer {
     position: fixed;
     left: 0;
@@ -243,3 +266,4 @@ table {
     z-index: 30;
     text-align: center;
  }
+
