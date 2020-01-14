@@ -1,6 +1,8 @@
 var express = require("express");
 var path = require("path");
 var router = express.Router();
+
+
 // var cloudinary = require('cloudinary');
 
 // cloudinary.config({
@@ -82,8 +84,8 @@ router.post("/Items", function(req, res) {
 
 // Transaction Table
 router.post("/Transaction", function(req, res) {
-  transactions.create([ "Borrower_id", "Borrower_Name", "LoanedItem_id", "LoadedItem_Name", "time_created"],
-   [req.body.Borrower_id, req.body.Borrower_Name, req.body.LoanedItem_id,req.body.LoadedItem_Name, req.body.time_created  ],
+  transactions.create([ "Borrower_id", "Borrower_Name", "LoanedItem_id", "LoanedItem_Name", "time_created"],
+   [req.body.Borrower_id, req.body.Borrower_Name, req.body.LoanedItem_id,req.body.LoanedItem_Name, req.body.time_created  ],
   
   function(result) {
     // Send back the ID of the new quote
@@ -149,7 +151,7 @@ router.put("/Transaction/:id", function(req, res) {
     Borrower_Name: req.body.Borrower_Name,
     Borrower_id: req.body.Borrower_id,
     LoanedItem_id: req.body.LoanedItem_id,
-    LoadedItem_Name: req.body.LoadedItem_Name,
+    LoanedItem_Name: req.body.LoanedItem_Name,
     Time_Created: req.body.time_created
   }, condition, function(result) {
     if (result.changedRows == 0) {

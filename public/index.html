@@ -87,7 +87,7 @@
         <h2 class="small-description">A new online way of renting items you need</h2>
 
 
-        <div class="selections">
+        <div class="personSelection">
           <select id="choosePerson" name="currentUser">
             <!-- <option value="volvo">Volvo</option> -->
 
@@ -108,14 +108,11 @@
 
 
   </div>
-  <div class="choose-item">
-
-
-  </div>
+ 
   </section>
 
   <div class="row">
-    <div class="col-lg-5">
+    <div class="col-lg-5 warehouse">
       <i class="fas fa-warehouse fa-7x"></i>
       <p>Pick an item <br> from our special<br> selection of inventory</p>
     </div>
@@ -193,8 +190,15 @@
 
 
 
+  <div class="itemSelection">
+    <select id="chooseItem" name="currentItem">
+      <!-- <option value="volvo">Volvo</option> -->
 
-
+    </select>
+    
+    <div class="choose-item">
+      <button type="submit" class="btn btn-primary btn-sm" id="submitTransaction">RENT ITEM</button>
+      </div>
 </body>
 
 </html>
