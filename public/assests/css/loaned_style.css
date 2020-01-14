@@ -252,6 +252,18 @@ table {
     padding: 10px;
     box-shadow: 5px 10px 8px 10px #888888;
     margin-bottom: 5%;
-   z-index: 20;
+   /* z-index: 20; */
 }
+
+
+.center-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    z-index: 30;
+    text-align: center;
+ }
 
