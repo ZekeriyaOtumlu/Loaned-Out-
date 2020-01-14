@@ -28,7 +28,12 @@
           <li class="nav-item active">
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
-         
+
+          <li class="nav-item active">
+            <a class="nav-link adminLink" href="/admin">Admin Page <span class="sr-only">(current)</span></a>
+          </li>
+
+
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
@@ -74,38 +79,49 @@
 
           </select>
 
-          
+
           OR
-          
+
           <button type="button" class="btn btn-primary" id="btn1" data-toggle="modal" data-target="#exampleModal">
             Add User
           </button>
         </div>
-        
-        
+
+
         <div class="itemSelection">
           <select id="chooseItem" name="currentItem">
             <!-- <option value="volvo">Volvo</option> -->
-      
+
           </select>
-          
+
           <div class="choose-item">
-            <button type="submit" class="btn btn-primary btn-sm" id="submitTransaction">RENT ITEM</button>
-            </div>
-      </div>
+            <button type="submit" class="btn btn-primary btn-sm" id="submitTransaction">BORROW ITEM</button>
+          </div>
+        </div>
+
+        <br><br><br>
+    
+   
+        <table id="displayItems2">
+          <tr><th>ITEMS</th></tr>
+          <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Value</th>
+            </tr>
+        <br><br>
     </section>
 
 
 
   </div>
+
  
-  </section>
 
 
 
 
-
-  <p id="adminLink"><a href="/admin">Admin Page</a></p>
 
   </div>
 
@@ -132,15 +148,23 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        
-      
-          
-        
-        
-      
-      
-      
-      <div class="modal-body">
+
+
+
+        <footer class="center-footer">
+          <div class="footer-container">
+            <p> copyright © Loaned Out App January 2020</p>
+          </div>
+        </footer>
+
+
+
+
+
+
+
+        <div class="modal-body">
+
 
           <!-- FORM SECTION -->
           <form id="add_user">
@@ -161,34 +185,25 @@
               <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div> -->
           </form>
-        </div>
- 
+
+          </div>
 
 
 
 
-
-
-
-
-
-
-
-      <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-      <script src="https://kit.fontawesome.com/a5a0fef831.js" crossorigin="anonymous"></script>
-      <script src="./assests/js/index.js"></script>
+          <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+          <script src="https://kit.fontawesome.com/a5a0fef831.js" crossorigin="anonymous"></script>
+          <script src="./assests/js/index.js"></script>
 </body>
 
 </html>

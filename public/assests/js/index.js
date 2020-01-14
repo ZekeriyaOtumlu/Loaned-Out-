@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-  console.log("hello")
   $.ajax("/People", {
     type: "GET"
   }).then(function (data) {
@@ -111,6 +110,33 @@ console.log(d);
   });
 
 
-});
 
 
+  $.ajax("/items", {
+    type: "GET"
+  }).then(function(data) {
+    var item = data.Items;
+  var len = item.length;
+  console.log(len);
+
+    var item_elem = $("#displayItems2");
+    for (var i = 0; i < len; i++) {
+       
+      item_elem.append(
+        "<tr>" + "<td>" +
+          item[i].item_id +
+          "</td>" + "<td>" +
+          item[i].item_name +
+          "</td>" + "<td>" +
+          item[i].Category +
+          "</td>" + "<td>" +
+          item[i].Value +
+          "</td>" + "</tr>" + "</table>"
+      
+      );
+    }
+
+  });
+
+
+  });
