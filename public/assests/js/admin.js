@@ -10,17 +10,19 @@ $(document).ready(function() {
       for (var i = 0; i < len; i++) {
          
         item_elem.append(
-          "<p>" +
+          "<tr>" + "<td>" +
             item[i].item_id +
-            "." +
+            "</td>" + "<td>" +
             item[i].item_name +
-            "," +
+            "</td>" + "<td>" +
             item[i].Category +
-            "," +
+            "</td>" + "<td>" +
             item[i].Value +
+            "</td>" + "<td>" +
             "<button data-itemid='" +
             item[i].item_id +
-            "'class='delItem'>Delete Item</button></p></li>"
+            "'class='delItem'>Delete Item</button>" +
+            "</td>" + "</tr>" + "</table>"
         );
       }
   
@@ -127,17 +129,19 @@ $(document).ready(function() {
     for (var i = 0; i < len; i++) {
        
       transactions_elem.append(
-        "<p>" +
+        "<tr>" + "<td>" +
         transactions[i].transaction_id +
-          "." +
+          "</td>" + "<td>" +
           transactions[i].Borrower_Name +
-          "," +
+          "</td>" + "<td>" +
           transactions[i].LoanedItem_Name +
-          "," +
+          "</td>" + "<td>" +
           transactions[i].time_created +
+          "</td>" + "<td>" +
           "<button data-transactionid='" +
           transactions[i].transaction_id +
-          "'class='delTransaction'>Item Returned</button></p></li>"
+          "'class='delTransaction'>Item Returned</button>" +
+          "</td>" + "</tr>" + "</table>"
       );
     }
 
@@ -186,7 +190,7 @@ $(document).ready(function() {
           "</td>" + "<td>" +
           "<button data-peopleid='" +
           person[i].people_id + 
-          "'class='delPerson'>Delete Person</button></p></li>" + 
+          "'class='delPerson'>Delete Person</button>" + 
           "</td>" + "</tr>" + "</table>"
       );
     }
