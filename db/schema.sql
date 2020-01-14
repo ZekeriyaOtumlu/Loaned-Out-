@@ -7,7 +7,6 @@ CREATE TABLE People (
 	name VARCHAR(255) NOT NULL,
 	Phone_Number VARCHAR(20) NOT NULL,
 	Email VARCHAR(255) NOT NULL,
-	Photo_url VARCHAR (255),
 	PRIMARY KEY (people_id)
 );
 
@@ -17,8 +16,6 @@ CREATE TABLE Items
 	PRIMARY KEY (item_id),
 	item_name varchar(255) NOT NULL,
 	Category varchar(255) NOT NULL,
-	Value varchar(255) NOT NULL,
-	image_url VARCHAR(255)
 );
 
 CREATE TABLE Transaction
