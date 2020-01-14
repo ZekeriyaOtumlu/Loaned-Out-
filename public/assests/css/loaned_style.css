@@ -84,6 +84,7 @@ margin-left: 0;
 #adminLink {
     float: right;
     padding-top: 3%;
+    padding-right: 3%;
 }
 
 #displayItems {
@@ -223,18 +224,26 @@ table {
 
 
    footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  
+    color: white;
+    z-index: 30;
+    text-align: center;
        background-color: lightgray;
    }
     .footer-container {
-        height: 40px;
+        height: 15px;
     }
    .center-footer {
        background-color: lightgrey;
-       height: 10%;
+      
    }
 
    .footer-mark {
-      margin-left: 35%;
+      margin-left: 0 auto;
       padding-top: 3%;
    }
 
@@ -256,15 +265,4 @@ table {
    /* z-index: 20; */
 }
 
-
-.center-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    z-index: 30;
-    text-align: center;
- }
 
