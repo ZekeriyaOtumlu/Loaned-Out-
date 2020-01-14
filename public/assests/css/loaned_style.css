@@ -64,3 +64,69 @@ background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, F
         top: 20%;
     }
 
+.admin-body {
+   background-color: skyblue
+
+}
+
+.admin-main {
+    /* background-color: white; */
+}
+
+#displayItems {
+    background-color: white;
+    width: 35%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    margin-bottom: 5%;
+  float: left;
+}
+
+.admin-dashboard {
+    float: right;
+  font-weight: normal;
+  /* margin-left: 5%; */
+}
+
+.card-body {
+    width: 100%;
+    
+}
+.card-img-top {
+  margin-top: -10%;
+  padding-right: 5%;
+  padding-left: 5%;
+  height: 80%;
+  
+  
+}
+.card-img-top:hover {
+    padding: 10px;
+  box-shadow: 5px 10px 8px 10px #888888;
+  
+}
+
+html {
+    background-color:skyblue;
+}
+
+.quote {
+    margin-top: 15%;
+    
+    
+}
+img {
+    width: 100%;
+    height: 10%;
+}
+
+.fa-pen {
+   margin-left: 10%;
+}
+
+.fa-trash {
+    margin-left: 15%;
+}
