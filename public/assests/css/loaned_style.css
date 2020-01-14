@@ -130,3 +130,9 @@ img {
 .fa-trash {
     margin-left: 15%;
 }
+
+form {
+    /* margin: auto; */
+    margin-left: 5%;
+    margin-right: 50%;
+}
