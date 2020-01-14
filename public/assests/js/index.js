@@ -129,8 +129,6 @@ console.log(d);
           item[i].item_name +
           "</td>" + "<td>" +
           item[i].Category +
-          "</td>" + "<td>" +
-          item[i].Value +
           "</td>" + "</tr>" + "</table>"
       
       );

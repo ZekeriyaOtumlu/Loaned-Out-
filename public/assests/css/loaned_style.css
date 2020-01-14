@@ -249,9 +249,10 @@ table {
     background-color: white;
   
       border: 1px solid;
+    
     padding: 10px;
     box-shadow: 5px 10px 8px 10px #888888;
-    margin-bottom: 5%;
+    margin-bottom: 15%;
    /* z-index: 20; */
 }
 
