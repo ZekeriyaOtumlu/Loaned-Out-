@@ -164,13 +164,53 @@ $(document).ready(function() {
 
 
 
+  $.ajax("/People", {
+    type: "GET"
+  }).then(function(data) {
+    var person = data.People;
+  var len = person.length;
+  console.log(person);
+
+    var person_elem = $("#displayPeople");
+    for (var i = 0; i < len; i++) {
+       
+      person_elem.append(
+        "<tr>" + "<td>" + 
+          person[i].people_id +
+          "</td>" + "<td>" +
+          person[i].name +
+          "</td>" + "<td>" +
+          person[i].Phone_Number +
+          "</td>" + "<td>" +
+          person[i].Email +
+          "</td>" + "<td>" +
+          "<button data-peopleid='" +
+          person[i].people_id + 
+          "'class='delPerson'>Delete Person</button></p></li>" + 
+          "</td>" + "</tr>" + "</table>"
+      );
+    }
+  });
+
+  $(document).on("click", ".delPerson", function(event) {
+    // Get the ID from the button.
+    // This is shorthand for $(this).attr("data-planid")
+    var id = $(this).data("peopleid");
+    console.log("delete this is " + this);
+    console.log("delete id is " + id);
+    location.reload();
 
 
+    $.ajax("/People/" + id, {
+      type: "DELETE"
+    }).then(function() {
+      console.log("deleted id ", id);
+      // Reload the page to get the updated list
+      location.reload();
+    });
+  
 
-
-
-
-
+  });
 
 
 function addItemshow() {
@@ -195,5 +235,3 @@ function updateItemshow() {
 
 
 // cloudinary.uploader.upload("sample.jpg", {"crop":"limit","tags":"samples","width":3000,"height":2000}, function(result) { console.log(result) });
-
-
