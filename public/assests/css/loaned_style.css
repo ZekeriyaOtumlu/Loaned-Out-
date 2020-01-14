@@ -90,7 +90,7 @@ margin-left: 0;
     padding: 10px;
     box-shadow: 5px 10px 8px 10px #888888;
     margin-bottom: 5%;
-  float: left;
+    float: left;
 }
 
 
@@ -104,6 +104,18 @@ margin-left: 0;
     box-shadow: 5px 10px 8px 10px #888888;
     margin-bottom: 5%;
   float: left;
+}
+
+#displayPeople {
+    background-color: white;
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    margin-bottom: 5%;
+  /* float: left; */
 }
 
 .admin-dashboard {
@@ -159,3 +171,18 @@ form {
 }
 
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

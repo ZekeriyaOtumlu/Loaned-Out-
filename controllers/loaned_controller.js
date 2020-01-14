@@ -61,8 +61,8 @@ router.get("/Transaction", function(req, res) {
 
 // People Table
 router.post("/People", function(req, res) {
-  loan.create([ "name", "Phone_Number", "Email", "Photo_url" ],
-  [req.body.name, req.body.Phone_Number, req.body.Email, req.body.Photo_url],
+  loan.create([ "name", "Phone_Number", "Email" ],
+  [req.body.name, req.body.Phone_Number, req.body.Email],
     function(result) {
     // Send back the ID of the new quote
     res.json({ people_id: result.insertId });
@@ -72,8 +72,8 @@ router.post("/People", function(req, res) {
 // Items Table
 router.post("/Items", function(req, res) {
 
-  item.create([ "item_name", "Category", "Value", "image_url" ], [
-  req.body.item_name, req.body.Category, req.body.Value, req.body.image_url],
+  item.create([ "item_name", "Category", "Value" ], [
+  req.body.item_name, req.body.Category, req.body.Value ],
 
   
    function(result) {
@@ -104,8 +104,7 @@ router.put("/People/:id", function(req, res) {
     Name: req.body.name,
     Phone_Number: req.body.Phone_Number,
     Email: req.body.Email,
-    Photo_url: req.body.Photo_url
-  }, condition, function(result) {
+    }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -126,7 +125,6 @@ router.put("/Items/:id", function(req, res) {
    Category: req.body.Category,
    Value: req.body.Value,
 
-   Image_URL: req.body.image_url
 
   }, condition, function(result) {
     if (result.changedRows == 0) {
