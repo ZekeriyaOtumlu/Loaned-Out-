@@ -16,6 +16,8 @@ CREATE TABLE Items
 	PRIMARY KEY (item_id),
 	item_name varchar(255) NOT NULL,
 	Category varchar(255) NOT NULL,
+	Value varchar(255) NOT NULL
+
 );
 
 CREATE TABLE Transaction
