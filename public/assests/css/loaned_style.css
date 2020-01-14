@@ -168,7 +168,10 @@ form {
     /* margin: auto; */
     margin-left: 5%;
     margin-right: 50%;
+
 }
+
+
 
 
 table {
@@ -186,3 +189,4 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
