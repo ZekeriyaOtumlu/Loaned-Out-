@@ -60,9 +60,9 @@ $(document).ready(function() {
           Value: $("#add_item [id=value1]")
           .val()
           .trim(),
-          image_url: $("#add_item [id=itemPhoto1]")
-          .val()
-          .trim()
+          // image_url: $("#add_item [id=itemPhoto1]")
+          // .val()
+          // .trim()
       };
       
 //       // Send the POST request.
@@ -96,9 +96,9 @@ $(document).ready(function() {
         Value: $("#update_item [id=value2]")
         .val()
         .trim(),
-        image_url: $("#update_item [id=itemPhoto2]")
-        .val()
-        .trim()
+        // image_url: $("#update_item [id=itemPhoto2]")
+        // .val()
+        // .trim()
     };
 
 //       // Send the PUT request.
