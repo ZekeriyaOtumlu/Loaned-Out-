@@ -116,6 +116,63 @@ $(document).ready(function() {
   });
 
 
+  $.ajax("/Transaction", {
+    type: "GET"
+  }).then(function(data) {
+    var transactions = data.Transaction;
+  var len = transactions.length;
+  console.log(transactions);
+
+    var transactions_elem = $("#displayTransaction");
+    for (var i = 0; i < len; i++) {
+       
+      transactions_elem.append(
+        "<p>" +
+        transactions[i].transaction_id +
+          "." +
+          transactions[i].Borrower_Name +
+          "," +
+          transactions[i].LoanedItem_Name +
+          "," +
+          transactions[i].time_created +
+          "<button data-transactionid='" +
+          transactions[i].transaction_id +
+          "'class='delTransaction'>Item Returned</button></p></li>"
+      );
+    }
+
+  });
+
+  $(document).on("click", ".delTransaction", function(event) {
+    // Get the ID from the button.
+    // This is shorthand for $(this).attr("data-planid")
+    var id = $(this).data("transactionid");
+    console.log("delete this is " + this);
+    console.log("delete id is " + id);
+
+  
+
+    // Send the DELETE request.
+    $.ajax("/Transaction/" + id, {
+      type: "DELETE"
+    }).then(function() {
+      console.log("deleted id ", id);
+      // Reload the page to get the updated list
+      location.reload();
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
 function addItemshow() {
 
     $("#add_item").toggle();
@@ -131,6 +188,12 @@ function updateItemshow() {
 
 
 
-cloudinary.uploader.upload("sample.jpg", {"crop":"limit","tags":"samples","width":3000,"height":2000}, function(result) { console.log(result) });
+
+
+
+
+
+
+// cloudinary.uploader.upload("sample.jpg", {"crop":"limit","tags":"samples","width":3000,"height":2000}, function(result) { console.log(result) });
 
 
