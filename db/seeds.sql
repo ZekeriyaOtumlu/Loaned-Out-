@@ -12,5 +12,4 @@ insert into Items (item_name, Category, Value, image_url) values
 ("Impact Drill", "Tool", 100.00, "#"),
 ("Power Sander", "Tool", 60.00, "#"),
 ("Call of Duty - X-box", "Video Game", 60.00, "#"),
-("Money", "Money", 20.00, "#")
 ;
