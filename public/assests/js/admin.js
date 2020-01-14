@@ -10,7 +10,7 @@ $(document).ready(function() {
       for (var i = 0; i < len; i++) {
          
         item_elem.append(
-          "<li><p>" +
+          "<p>" +
             item[i].item_id +
             "." +
             item[i].item_name +
