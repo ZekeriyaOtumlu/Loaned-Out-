@@ -215,3 +215,20 @@ table {
    label {
        font-weight: bolder;
    }
+
+
+   .itemTableMain {
+        margin-left:auto;
+        margin-right:auto; 
+        float: none;
+   }
+   
+   #displayItems2 {
+    background-color: white;
+  
+      border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    margin-bottom: 5%;
+   z-index: 20;
+}
