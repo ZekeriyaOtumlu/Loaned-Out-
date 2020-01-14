@@ -81,6 +81,11 @@ margin-left: 0;
     color: black;
 }
 
+#adminLink {
+    float: right;
+    padding-top: 3%;
+}
+
 #displayItems {
     background-color: white;
     width: auto;
@@ -143,7 +148,7 @@ margin-left: 0;
 }
 
 html {
-    background-color:skyblue;
+    /* background-color:skyblue; */
 }
 
 .quote {
@@ -214,4 +219,20 @@ table {
   }
    label {
        font-weight: bolder;
+   }
+
+   footer {
+       background-color: lightgray;
+   }
+    .footer-container {
+        height: 40px;
+    }
+   .center-footer {
+       background-color: lightgrey;
+       height: 10%;
+   }
+
+   .footer-mark {
+      margin-left: 35%;
+      padding-top: 3%;
    }
