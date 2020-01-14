@@ -75,7 +75,7 @@ background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, F
 
 #displayItems {
     background-color: white;
-    width: 35%;
+    width: 45%;
     margin-left: 5%;
     margin-right: 5%;
     border: 1px solid;
@@ -96,7 +96,7 @@ background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, F
     
 }
 .card-img-top {
-  margin-top: -10%;
+  /* margin-top: -10%; */
   padding-right: 5%;
   padding-left: 5%;
   height: 80%;
@@ -129,4 +129,10 @@ img {
 
 .fa-trash {
     margin-left: 15%;
+}
+
+form {
+    /* margin: auto; */
+    margin-left: 5%;
+    margin-right: 50%;
 }
