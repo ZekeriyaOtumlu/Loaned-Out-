@@ -10,17 +10,19 @@ $(document).ready(function() {
       for (var i = 0; i < len; i++) {
          
         item_elem.append(
-          "<p>" +
+          "<tr>" + "<td>" +
             item[i].item_id +
-            "." +
+            "</td>" + "<td>" +
             item[i].item_name +
-            "," +
+            "</td>" + "<td>" +
             item[i].Category +
-            "," +
+            "</td>" + "<td>" +
             item[i].Value +
+            "</td>" + "<td>" +
             "<button data-itemid='" +
             item[i].item_id +
-            "'class='delItem'>Delete Item</button></p></li>"
+            "'class='delItem'>Delete Item</button>" +
+            "</td>" + "</tr>" + "</table>"
         );
       }
   
@@ -60,9 +62,9 @@ $(document).ready(function() {
           Value: $("#add_item [id=value1]")
           .val()
           .trim(),
-          image_url: $("#add_item [id=itemPhoto1]")
-          .val()
-          .trim()
+          // image_url: $("#add_item [id=itemPhoto1]")
+          // .val()
+          // .trim()
       };
       
 //       // Send the POST request.
@@ -96,9 +98,9 @@ $(document).ready(function() {
         Value: $("#update_item [id=value2]")
         .val()
         .trim(),
-        image_url: $("#update_item [id=itemPhoto2]")
-        .val()
-        .trim()
+        // image_url: $("#update_item [id=itemPhoto2]")
+        // .val()
+        // .trim()
     };
 
 //       // Send the PUT request.
@@ -113,6 +115,105 @@ $(document).ready(function() {
         location.reload();
       });
     });
+  });
+
+
+  $.ajax("/Transaction", {
+    type: "GET"
+  }).then(function(data) {
+    var transactions = data.Transaction;
+  var len = transactions.length;
+  console.log(transactions);
+
+    var transactions_elem = $("#displayTransaction");
+    for (var i = 0; i < len; i++) {
+       
+      transactions_elem.append(
+        "<tr>" + "<td>" +
+        transactions[i].transaction_id +
+          "</td>" + "<td>" +
+          transactions[i].Borrower_Name +
+          "</td>" + "<td>" +
+          transactions[i].LoanedItem_Name +
+          "</td>" + "<td>" +
+          transactions[i].time_created +
+          "</td>" + "<td>" +
+          "<button data-transactionid='" +
+          transactions[i].transaction_id +
+          "'class='delTransaction'>Item Returned</button>" +
+          "</td>" + "</tr>" + "</table>"
+      );
+    }
+
+  });
+
+  $(document).on("click", ".delTransaction", function(event) {
+    // Get the ID from the button.
+    // This is shorthand for $(this).attr("data-planid")
+    var id = $(this).data("transactionid");
+    console.log("delete this is " + this);
+    console.log("delete id is " + id);
+
+  
+
+    // Send the DELETE request.
+    $.ajax("/Transaction/" + id, {
+      type: "DELETE"
+    }).then(function() {
+      console.log("deleted id ", id);
+      // Reload the page to get the updated list
+      location.reload();
+    });
+  });
+
+
+
+  $.ajax("/People", {
+    type: "GET"
+  }).then(function(data) {
+    var person = data.People;
+  var len = person.length;
+  console.log(person);
+
+    var person_elem = $("#displayPeople");
+    for (var i = 0; i < len; i++) {
+       
+      person_elem.append(
+        "<tr>" + "<td>" + 
+          person[i].people_id +
+          "</td>" + "<td>" +
+          person[i].name +
+          "</td>" + "<td>" +
+          person[i].Phone_Number +
+          "</td>" + "<td>" +
+          person[i].Email +
+          "</td>" + "<td>" +
+          "<button data-peopleid='" +
+          person[i].people_id + 
+          "'class='delPerson'>Delete Person</button>" + 
+          "</td>" + "</tr>" + "</table>"
+      );
+    }
+  });
+
+  $(document).on("click", ".delPerson", function(event) {
+    // Get the ID from the button.
+    // This is shorthand for $(this).attr("data-planid")
+    var id = $(this).data("peopleid");
+    console.log("delete this is " + this);
+    console.log("delete id is " + id);
+    location.reload();
+
+
+    $.ajax("/People/" + id, {
+      type: "DELETE"
+    }).then(function() {
+      console.log("deleted id ", id);
+      // Reload the page to get the updated list
+      location.reload();
+    });
+  
+
   });
 
 
@@ -131,6 +232,10 @@ function updateItemshow() {
 
 
 
-cloudinary.uploader.upload("sample.jpg", {"crop":"limit","tags":"samples","width":3000,"height":2000}, function(result) { console.log(result) });
 
 
+
+
+
+
+// cloudinary.uploader.upload("sample.jpg", {"crop":"limit","tags":"samples","width":3000,"height":2000}, function(result) { console.log(result) });

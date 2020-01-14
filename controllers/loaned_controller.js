@@ -1,6 +1,8 @@
 var express = require("express");
 var path = require("path");
 var router = express.Router();
+
+
 // var cloudinary = require('cloudinary');
 
 // cloudinary.config({
@@ -59,8 +61,8 @@ router.get("/Transaction", function(req, res) {
 
 // People Table
 router.post("/People", function(req, res) {
-  loan.create([ "name", "Phone_Number", "Email", "Photo_url" ],
-  [req.body.name, req.body.Phone_Number, req.body.Email, req.body.Photo_url],
+  loan.create([ "name", "Phone_Number", "Email" ],
+  [req.body.name, req.body.Phone_Number, req.body.Email],
     function(result) {
     // Send back the ID of the new quote
     res.json({ people_id: result.insertId });
@@ -70,8 +72,8 @@ router.post("/People", function(req, res) {
 // Items Table
 router.post("/Items", function(req, res) {
 
-  item.create([ "item_name", "Category", "Value", "image_url" ], [
-  req.body.item_name, req.body.Category, req.body.Value, req.body.image_url],
+  item.create([ "item_name", "Category", "Value" ], [
+  req.body.item_name, req.body.Category, req.body.Value ],
 
   
    function(result) {
@@ -82,8 +84,8 @@ router.post("/Items", function(req, res) {
 
 // Transaction Table
 router.post("/Transaction", function(req, res) {
-  transactions.create([ "Borrower_id", "Borrower_Name", "LoanedItem_id", "LoadedItem_Name", "time_created"],
-   [req.body.Borrower_id, req.body.Borrower_Name, req.body.LoanedItem_id,req.body.LoadedItem_Name, req.body.time_created  ],
+  transactions.create([ "Borrower_id", "Borrower_Name", "LoanedItem_id", "LoanedItem_Name", "time_created"],
+   [req.body.Borrower_id, req.body.Borrower_Name, req.body.LoanedItem_id,req.body.LoanedItem_Name, req.body.time_created  ],
   
   function(result) {
     // Send back the ID of the new quote
@@ -102,8 +104,7 @@ router.put("/People/:id", function(req, res) {
     Name: req.body.name,
     Phone_Number: req.body.Phone_Number,
     Email: req.body.Email,
-    Photo_url: req.body.Photo_url
-  }, condition, function(result) {
+    }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -124,7 +125,6 @@ router.put("/Items/:id", function(req, res) {
    Category: req.body.Category,
    Value: req.body.Value,
 
-   Image_URL: req.body.image_url
 
   }, condition, function(result) {
     if (result.changedRows == 0) {
@@ -149,7 +149,7 @@ router.put("/Transaction/:id", function(req, res) {
     Borrower_Name: req.body.Borrower_Name,
     Borrower_id: req.body.Borrower_id,
     LoanedItem_id: req.body.LoanedItem_id,
-    LoadedItem_Name: req.body.LoadedItem_Name,
+    LoanedItem_Name: req.body.LoanedItem_Name,
     Time_Created: req.body.time_created
   }, condition, function(result) {
     if (result.changedRows == 0) {

@@ -7,7 +7,6 @@ CREATE TABLE People (
 	name VARCHAR(255) NOT NULL,
 	Phone_Number VARCHAR(20) NOT NULL,
 	Email VARCHAR(255) NOT NULL,
-	Photo_url VARCHAR (255),
 	PRIMARY KEY (people_id)
 );
 
@@ -17,8 +16,8 @@ CREATE TABLE Items
 	PRIMARY KEY (item_id),
 	item_name varchar(255) NOT NULL,
 	Category varchar(255) NOT NULL,
-	Value INTEGER NOT NULL,
-	image_url VARCHAR(255)
+	Value varchar(255) NOT NULL
+
 );
 
 CREATE TABLE Transaction
@@ -28,8 +27,6 @@ CREATE TABLE Transaction
 	Borrower_id INT NOT NULL,
 	Borrower_Name VARCHAR(255),
 	LoanedItem_id INT NOT NULL,
-	LoadedItem_Name VARCHAR(255),
-	time_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+	LoanedItem_Name VARCHAR(255),
+	time_created VARCHAR(255)
 );
-
-SET TIME_ZONE = '-05:00';
