@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+  console.log("hello")
   $.ajax("/People", {
     type: "GET"
   }).then(function (data) {
@@ -52,7 +53,7 @@ $(document).ready(function () {
     // [name=plan] will find an element with a "name" attribute equal to the string "plan"
     var newUser = {
       name: $("#add_user [id=username1]")
-        .val()
+         .val()
         .trim(),
       Phone_Number: $("#add_user [id=phonenum1]")
         .val()
@@ -60,9 +61,6 @@ $(document).ready(function () {
       Email: $("#add_user [id=email]")
         .val()
         .trim()
-      // image_url: $("#add_user [id=exampleFormControlFile1]")
-      //   .val()
-      //   .trim()
     };
     //       // Send the POST request.
     $.ajax("/People", {
@@ -110,8 +108,6 @@ console.log(d);
   });
 
 
-
-
   $.ajax("/items", {
     type: "GET"
   }).then(function(data) {
@@ -136,5 +132,6 @@ console.log(d);
 
   });
 
+});
 
-  });
+
