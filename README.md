@@ -7,7 +7,7 @@
 
 To view the app go to:
 
-https://github.com/ZekeriyaOtumlu/Loaned-Out-
+https://enigmatic-everglades-77067.herokuapp.com/
 
 ## Technologies
 ### Frontend
@@ -37,3 +37,8 @@ If getting an error then proceed with the following npm install.
   npm install express
 ```
 Must have nodeJS install for the app to fully function.
+
+## Authors:
+* Zekeriya Otumlu   : https://github.com/ZekeriyaOtumlu
+* Santiago Angarita : https://github.com/Santyf
+* Lazaro Perez      : https://github.com/LazaroPerez0823
