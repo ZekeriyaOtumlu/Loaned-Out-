@@ -103,7 +103,7 @@ router.put("/People/:id", function(req, res) {
   loan.update({
     Name: req.body.name,
     Phone_Number: req.body.Phone_Number,
-    Email: req.body.Email,
+    Email: req.body.Email
     }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
@@ -123,7 +123,7 @@ router.put("/Items/:id", function(req, res) {
   item.update({
    Item_Name: req.body.item_name,
    Category: req.body.Category,
-   Value: req.body.Value,
+   Value: req.body.Value
 
 
   }, condition, function(result) {
