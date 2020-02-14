@@ -119,9 +119,7 @@ height: 80%;
 box-shadow: 5px 10px 8px 10px #888888;
 
 }
-html {
-  /* background-color:skyblue; */
-}
+
 .quote {
   margin-top: 15%;
   
@@ -138,7 +136,7 @@ img {
   margin-left: 15%;
 }
 form {
-  /* margin: auto; */
+ 
   margin-left: 5%;
   margin-right: 50%;
 }
