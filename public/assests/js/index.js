@@ -1,4 +1,4 @@
-
+ 
 $(document).ready(function () {
   $.ajax("/People", {
     type: "GET"
