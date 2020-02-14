@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,45 +7,23 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./assests/css/loaned_style.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/a5a0fef831.js" crossorigin="anonymous"></script>
-  <script src="./assests/js/index.js"></script>
-
   <title>Document</title>
 </head>
-
 <body>
   <header>
-
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-danger">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="#">Loaned Out</a>
-
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <li class="nav-item active">
+            <a class="nav-link adminLink" href="/admin">Admin Page <span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -57,23 +34,18 @@
         </form>
       </div>
     </nav>
-
     </div>
     </div>
     </nav>
   </header>
-
   <div class="container-fluid">
-
     <section class="bodyColor">
       <style>
         .parallax {
           /* The image used */
           background-image: url("./assests/img/final pic.jpg");
-
           /* Set a specific height */
           height: 900px;
-
           /* Create the parallax scrolling effect */
           background-attachment: fixed;
           background-position: center;
@@ -81,74 +53,37 @@
           background-size: cover;
         }
       </style>
-
       <div class="parallax">
-        <h1 class="description">Renting Everyday Stuff <br> Made Easy</h1>
-        <h2 class="small-description">A new online way of renting items you need</h2>
-
-
+        <h1 class="description">Never Forget Who <br> Has Your Stuff</h1>
+        <h2 class="small-description">A new online way of keeping track of loaned out items </h2>
         <div class="personSelection">
           <select id="choosePerson" name="currentUser">
             <!-- <option value="volvo">Volvo</option> -->
-
           </select>
-
-
           OR
-
           <button type="button" class="btn btn-primary" id="btn1" data-toggle="modal" data-target="#exampleModal">
             Add User
           </button>
         </div>
-
         <div class="itemSelection">
           <select id="chooseItem" name="currentItem">
             <!-- <option value="volvo">Volvo</option> -->
-      
           </select>
-          
           <div class="choose-item">
             <button type="submit" class="btn btn-primary btn-sm" id="submitTransaction">BORROW ITEM</button>
-
           </div>
         </div>
-
         <br><br><br>
-
-
        
           <br><br>
-
-            </div>
-      </div>
-
     </section>
-
-
-
   </div>
- 
-  </section>
-
-
-
-
-
-
 <!-- <footer>
   
     <p id="adminLink"><a href="/admin">Admin Page</a></p>
     <p class="footer-mark"> copyright © Loaned Out App January 2020</p>
       
   </footer> -->
-
-
-
-  </div>
-
-
-
-
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -160,14 +95,8 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-
-
-
-
         <div class="modal-body">
-
           <!-- FORM SECTION -->
-
           <form id="add_user">
             <div class="form-group">
               <label for="username">Name</label>
@@ -181,43 +110,32 @@
               <label for="email">E-mail</label>
               <input type="UserName" class="form-control" id="email" placeholder="YourEmail@domain.com">
             </div>
-
             <button class="btn btn-primary">Add</button>
             <!-- <div class="form-group">
               <label for="exampleFormControlFile1">Upload your photo</label>
               <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div> -->
-
           </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" id="add_user_btn" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
   </div>
-
-  <table id="displayItems2">
-    <tr>
-      <th>ITEMS</th>
-    </tr>
-    <tr>
-      <th>ID</th>
-      <th>Item</th>
-      <th>Category</th>
-    </tr>
-
-
-
-<footer>
-
-  <p id="adminLink"><a href="/admin">Admin Page</a></p>
-  <p class="footer-mark"> copyright © Loaned Out App January 2020</p>
-
-</footer>
-
-
+    <footer class="center-footer">
+      <p> copyright © Loaned Out App January 2020</p>
+ 
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a5a0fef831.js" crossorigin="anonymous"></script>
+  <script src="./assests/js/index.js"></script>
 </body>
-
 </html>
